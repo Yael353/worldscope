@@ -7,7 +7,7 @@ import {
   useTransform,
   useMotionValueEvent,
 } from "framer-motion";
-import { Globe } from "./globe";
+import { Globe } from "../globe";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);

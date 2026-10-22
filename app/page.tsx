@@ -1,9 +1,9 @@
 "use client";
 
-import { CountryPanel } from "@/components/CountryPanel";
-import { GlowDivider } from "@/components/glow-divider";
-import { Hero } from "@/components/hero";
-import { MapTest } from "@/components/map-test";
+import { CountryPanel } from "@/components/dashboard/CountryPanel";
+import { GlowDivider } from "@/components/layout/glow-divider";
+import { Hero } from "@/components/layout/hero";
+import { MapTest } from "@/components/map/map-test";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
