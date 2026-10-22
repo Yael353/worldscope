@@ -1,10 +1,20 @@
+"use client";
+
+import { GlowDivider } from "@/components/glow-divider";
 import { Hero } from "@/components/hero";
+import { MapTest } from "@/components/map-test";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="relative bg-black">
       <Hero />
-      <section className="h-screen flex items-center justify-center"></section>
+      <div className="relative py-32 md:py-48">
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent" />
+        <GlowDivider />
+      </div>
+      <section className="relative z-10 min-h-screen flex items-center justify-center px-6 pt-12 pb-32">
+        <MapTest />
+      </section>
     </main>
   );
 }

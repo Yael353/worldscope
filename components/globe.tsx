@@ -28,7 +28,7 @@ export function Globe({ scrollOffset = 0 }: GlobeProps) {
       diffuse: 1.2,
       mapSamples: 16000,
       mapBrightness: 6,
-      baseColor: [0.1, 0.05, 0.15],
+      baseColor: [0.0, 0.1, 0.1],
       markerColor: [0.0, 0.9, 1.0],
       glowColor: [0.1, 0.1, 0.2],
     });
