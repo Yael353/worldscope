@@ -43,7 +43,7 @@ export function Hero() {
           style={{ y: globeY }}
           className="absolute inset-0 flex items-center justify-center"
         >
-          <div className="relative h-[80vmin] w-[80vmin] max-h-200 max-w-200">
+          <div className="relative h-[120vmin] w-[120vmin] max-h-200 max-w-200">
             <Globe scrollOffset={scrollOffsetValue} />
             <div
               className="pointer-events-none absolute inset-0 rounded-full"
@@ -61,11 +61,12 @@ export function Hero() {
           style={{ opacity: titleOpacity, y: titleY }}
           className="absolute bottom-[12vh] left-0 right-0 z-10 flex flex-col items-center text-center px-6"
         >
-          <h1 className="font-heading text-6xl md:text-8xl font-bold tracking-tight text-white">
+          <h1 className="font-heading text-6xl md:text-9xl font-bold tracking-tighter bg-linear-to-b from-white to-white/70 bg-clip-text text-transparent">
             Worldscope
           </h1>
-          <p className="mt-4 max-w-md text-lg text-muted-foreground">
-            Every country has a story. Here's where you figure it out.
+          <p className="mt-4 max-w-md text-lg md:text-xl text-negative leading-relaxed">
+            Every country tells a story shaped by its circumstances.{" "}
+            <span className="text-white">here is where you figure it out.</span>
           </p>
         </motion.div>
       </motion.div>
