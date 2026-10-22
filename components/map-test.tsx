@@ -10,7 +10,7 @@ import {
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-export function MapTest() {
+export function MapTest({ onSelect }: { onSelect: (name: string) => void }) {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
@@ -21,12 +21,10 @@ export function MapTest() {
       transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
       className="w-full max-w-6xl"
     >
-      
       <div className="absolute -top-12 left-0 right-0 h-24 pointer-events-none">
         <div className="h-full w-full rounded-t-[100%] border-t border-x border-white/10" />
       </div>
 
-   
       <div className="absolute -bottom-12 left-0 right-0 h-24 pointer-events-none">
         <div className="h-full w-full rounded-b-[100%] border-b border-x border-white/10" />
       </div>
@@ -49,8 +47,7 @@ export function MapTest() {
                 key={geo.rsmKey}
                 geography={geo}
                 onClick={() => {
-                  console.log("Clicked:", geo.properties?.name);
-                  setSelected(geo.properties?.name);
+                  onSelect(geo.properties?.name);
                 }}
                 style={{
                   default: {
