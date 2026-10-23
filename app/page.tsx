@@ -1,10 +1,9 @@
 "use client";
 
 import { CountryPanel } from "@/components/dashboard/CountryPanel";
-import { GlowDivider } from "@/components/layout/glow-divider";
 import { Hero } from "@/components/layout/hero";
 import { MapTest } from "@/components/map/map-test";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
@@ -20,7 +19,7 @@ export default function Home() {
       if (panelRef.current) {
         const top =
           panelRef.current.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({ top, behavior: "smooth" });
+        window.scrollTo({ top, behavior: "auto" });
       }
 
       setTimeout(() => {
@@ -32,9 +31,16 @@ export default function Home() {
   return (
     <main className="relative bg-black">
       <Hero />
-      <GlowDivider />
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-6 py-24">
-        <MapTest onSelect={handleSelectCountry} />
+      <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 pb-24 pt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 100, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="w-full flex justify-center mt-12"
+        >
+          <MapTest onSelect={handleSelectCountry} />
+        </motion.div>
       </section>
 
       {selectedCountry && (
@@ -43,7 +49,6 @@ export default function Home() {
         </div>
       )}
 
-    
       <AnimatePresence>
         {isTransitioning && (
           <motion.div

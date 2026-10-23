@@ -8,6 +8,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { Globe } from "../globe";
+import { GlowDivider } from "./glow-divider";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -66,10 +67,15 @@ export function Hero() {
           </h1>
           <p className="mt-4 max-w-md text-lg md:text-xl text-negative leading-relaxed">
             Every country tells a story shaped by its circumstances.{" "}
-            <span className="text-white">here is where you figure it out.</span>
+            <span className="text-white">
+              Here, the data tells it back to you
+            </span>
           </p>
         </motion.div>
       </motion.div>
+      <div className="absolute bottom-0 left-0 right-0 z-20">
+        <GlowDivider />
+      </div>
     </section>
   );
 }

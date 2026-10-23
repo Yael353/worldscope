@@ -30,7 +30,7 @@ export function MapTest({ onSelect }: { onSelect: (name: string) => void }) {
       </div>
 
       <h2 className="font-heading text-3xl md:text-4xl text-white mb-8 text-center tracking-widest">
-        Choose a country to explore
+        Which country would you like to explore?{" "}
       </h2>
 
       <ComposableMap
