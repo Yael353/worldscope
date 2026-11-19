@@ -2,7 +2,7 @@
 
 import { CountryPanel } from "@/components/layout/country/CountryPanel";
 import { Hero } from "@/components/layout/hero/hero";
-import { MapTest } from "@/components/layout/map/map-test";
+import { MapSection } from "@/components/layout/map/map-section";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -39,7 +39,7 @@ export default function Home() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="w-full flex justify-center "
         >
-          <MapTest onSelect={handleSelectCountry} />
+          <MapSection onSelect={handleSelectCountry} />
         </motion.div>
       </section>
 
