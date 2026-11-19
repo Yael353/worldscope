@@ -70,8 +70,6 @@ export async function fetchOwidData(
 
       const url = `${OWID_BASE}/${slug}.csv?${params}`;
 
-      // Cache-delade förfrågningar avbryts inte
-      // när en enskild komponent avmonteras.
       const response = await fetch(url);
 
       if (!response.ok) {
